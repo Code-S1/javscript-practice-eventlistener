@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using event listener in javascript</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <section class="main dark_theme">
+        <h1 id="main_heading" class="heading">WELCOME TO MY PAGE!!</h1>
+        <p id="main_text" class="text">In this project, I will be using an event listener and hopefully make something
+            out of it. My
+            goal is to get the button to change the theme of the page from white to black so that it looks really cool.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias eaque beatae alias omnis eligendi
+            assumenda doloribus suscipit quasi minima ipsam.</p>
+        <button id="button" class="button">Click Me!!</button>
+    </section>
+
+</body>
+<script>
+    let theButton = document.getElementById('button');
+    theButton.addEventListener('click', changeTheme);
+    function changeTheme() {
+        if (document.body.style.backgroundColor === 'black') {
+            document.body.style.backgroundColor = 'white';
+            document.getElementById('main_heading').style.color = 'black';
+            document.getElementById('main_text').style.color = 'black';
+        }
+
+        else {
+            document.body.style.backgroundColor = 'black';
+            document.getElementById('main_heading').style.color = 'white';
+            document.getElementById('main_text').style.color = 'white';
+        }
+    }
+</script>
+
+</html>
